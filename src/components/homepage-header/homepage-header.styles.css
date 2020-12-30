@@ -1,0 +1,13 @@
+.home-page-nav{
+    padding: 8px 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-page-nav__logo a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0, 0, 255);
+    font-size: 25px;
+}

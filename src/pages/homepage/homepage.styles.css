@@ -1,0 +1,47 @@
+.home-page-login-area{
+    padding: 0 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin:40px 0;
+    margin-bottom: 120px;
+}
+
+.home-page-login-area__image img{
+    width: 400px;
+}
+
+.home-page-login-area__form h1{
+    font-size: 50px;
+    font-weight: normal;
+    color: rgb(44, 102, 209);
+}
+
+.domain-names{
+    padding: 120px 400px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(219, 229, 236);
+}
+
+.domain-names__chips {
+    color: gray;
+}
+
+.domain-names__heading h1{
+    font-weight: normal;
+}
+
+.job-post-banner{
+    background-color: rgb(171, 198, 218);
+    display: flex;
+    padding: 40px 400px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.job-post-banner h2 {
+    margin-right: 184px;
+    font-weight: 500;
+    color: rgb(4, 104, 180)
+}
