@@ -1,0 +1,19 @@
+.post-admin {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+}
+
+.post-admin-info {
+    padding-left: 4px;
+}
+
+.post-admin-info h5,.post-admin-info h6{
+    padding: 2px;
+}
+
+.post-admin-info h6 {
+    color: rgb(92, 92, 92);
+    font-weight: 600;
+}

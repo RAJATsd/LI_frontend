@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import {withRouter} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
+import axios from 'axios';
+import { globalConstants } from '../../constants';
 
 import Header from '../../components/homepage-header/homepage-header.component';
 import './signup.styles.css';
@@ -16,20 +19,36 @@ const useStyles = makeStyles({
     }
 });
 
-const Signup = () => {
+const Signup = ({history}) => {
     const matStyles = useStyles();
     const [signupInfo, setSignupInfo] = useState({
         'email': '',
         'password': '',
-        'confirmPassword': ''
+        'confirmPassword': '',
+        'name': ''
     });
 
     const handleChangeEvent = async (event) => {
         const { value, name } = event.target;
         setSignupInfo({
             ...signupInfo,
-            [name]:value
+            [name]: value
         });
+    }
+
+    const handleButtonSubmit = async () => {
+        if (signupInfo.password !== signupInfo.confirmPassword) {
+            return;
+        }
+        const user = {
+            ...signupInfo
+        }
+        console.log(user);
+        const signup = await axios.post(`${globalConstants.baseServerUrl}/auth/signup`,user );
+        if(signup.data.success)
+        {
+            history.push('/signin');
+        }
     }
 
     return (
@@ -40,6 +59,14 @@ const Signup = () => {
                     Make the most of your professional life
                 </h3>
                 <div className='signup-page-content__form'>
+                    <TextField
+                        className={matStyles.formInput}
+                        label="User Name"
+                        variant="filled"
+                        type="text"
+                        onChange={handleChangeEvent}
+                        name='name'
+                    />
                     <TextField
                         className={matStyles.formInput}
                         label="Email"
@@ -71,6 +98,7 @@ const Signup = () => {
                         color="primary"
                         className={matStyles.formButton}
                         size='large'
+                        onClick={handleButtonSubmit}
                     >
                         Signup
                     </Button>
@@ -80,4 +108,4 @@ const Signup = () => {
     )
 }
 
-export default Signup;
+export default withRouter(Signup);

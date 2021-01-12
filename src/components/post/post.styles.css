@@ -1,0 +1,10 @@
+.post {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.post-multimedia img{
+    width: 100%;
+    vertical-align: middle;
+}

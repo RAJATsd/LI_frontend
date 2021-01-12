@@ -1,0 +1,38 @@
+.feed-post{
+    background: white;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 40px;
+}
+
+.feed-post_start{
+    border: rgb(187, 187, 187) 1px solid;
+    border-radius: 25px;
+    padding: 12px 20px;
+    color: rgb(112, 112, 112);
+    display: flex;
+    align-items: center;
+}
+
+.feed-post_start:hover{
+    cursor: pointer;
+    background: rgb(224, 224, 224);
+}
+
+.feed-post_start h4 {
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.feed-post_uploads {
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed-post_uploads__item {
+    display: flex;
+    align-items: center;
+    color: grey;
+    
+}

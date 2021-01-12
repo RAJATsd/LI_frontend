@@ -1,0 +1,110 @@
+.settings-navigator {
+    position: absolute;
+    margin-top: 8px;
+    right : 14vw;
+    width: 16vw;
+    background: white;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: 1px rgb(231, 231, 231) solid;
+}
+
+.hidden-nav {
+    display: none;
+}
+
+.settings-navigator-basic-info{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-bottom: 1px rgb(187, 186, 186) solid;
+}
+
+.settings-navigator-basic-info button {
+    margin-top: 8px;
+    border-radius: 16px;
+    border: 1px rgb(1, 1, 197) solid;
+    color: rgb(1, 1, 197);
+    background: white;
+    padding: 4px;
+}
+
+.settings-navigator-basic-info button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 3px blue inset ;
+}
+
+.settings-navigator-basic-info__name {
+    display: flex;
+    justify-content: flex-start;   
+}
+
+.settings-navigator-basic-info__name-content {
+    margin-left: 8px;
+}
+
+.settings-navigator-account {
+    padding: 8px;
+    border-bottom: 1px rgb(187, 186, 186) solid;
+}
+
+.settings-navigator-account h4 {
+    font-weight: 600;
+}
+
+.settings-navigator-account h5 {
+    font-weight: normal;
+    color: rgb(107, 107, 107);
+    margin-top: 8px;
+}
+
+.settings-navigator-account a {
+    text-decoration: none;
+}
+
+.settings-navigator-account a:hover {
+    text-decoration: underline  rgb(107, 107, 107);
+}
+
+.settings-navigator-manage {
+    padding: 8px;
+    border-bottom: 1px rgb(187, 186, 186) solid;
+}
+
+.settings-navigator-manage h4 {
+    font-weight: 600;
+}
+
+.settings-navigator-manage h5 {
+    font-weight: normal;
+    color: rgb(107, 107, 107);
+    margin-top: 8px;
+}
+
+.settings-navigator-manage a {
+    text-decoration: none;
+}
+
+.settings-navigator-manage a:hover {
+    text-decoration: underline  rgb(107, 107, 107);
+}
+
+.settings-navigator-logout {
+    padding: 8px;
+}
+
+.settings-navigator-logout h5 {
+    font-weight: normal;
+    color: rgb(107, 107, 107);
+    margin-top: 8px;
+}
+
+.settings-navigator-logout a {
+    text-decoration: none;
+}
+
+.settings-navigator-logout a:hover {
+    text-decoration: underline  rgb(107, 107, 107);
+}
+
+

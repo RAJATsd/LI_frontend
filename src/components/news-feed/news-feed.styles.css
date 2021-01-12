@@ -1,0 +1,26 @@
+.news-feed{
+    flex:0.3;
+    margin-top: 88px;
+}
+
+.news-feed-main {
+    width: 60%;
+    padding: 8px 16px;
+    background: white;
+    border-radius: 8px;
+}
+
+.news-feed-main-list_container {
+    margin-top: 8px;
+}
+
+
+
+.news-feed-main h4 {
+    font-weight: normal;
+}
+
+.news-feed-main-list {
+    padding-left: 16px;
+    font-weight: 500;
+}

@@ -1,0 +1,20 @@
+
+.post-description {
+    padding: 12px;
+    padding-top: 0;
+}
+
+.post-description h4 {
+    font-weight: 500;
+}
+
+
+.post-desciption-text button {
+    border: none;
+    background: none;
+    color: blue;
+}
+
+.post-desciption-text button:hover {
+    cursor: pointer;
+}
