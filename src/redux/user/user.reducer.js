@@ -3,7 +3,8 @@ import userActionTypes from './user.types';
 const INITIAL_STATE = {
     currentUser : null,
     isFetching: false,
-    errMsg:null
+    errMsg:null,
+    checkingLoggedIn : true
 }
 
 const userReducer = (state=INITIAL_STATE,action) => {
@@ -18,12 +19,14 @@ const userReducer = (state=INITIAL_STATE,action) => {
             return {
                 ...state,
                 currentUser:action.payload,
-                errMsg:null
+                errMsg:null,
+                checkingLoggedIn:false
             }
         case userActionTypes.LOGIN_USER_FAILED : 
             return {
                 ...state,
-                errMsg : action.payload
+                errMsg : action.payload,
+                checkingLoggedIn:false
             }
         default: 
             return state;

@@ -12,6 +12,11 @@ const isFetchingSelector = createSelector(
     (user) => user.isFetching
 )
 
+const isCheckingLoggedInSelector = createSelector(
+    [userSelector],
+    (user) => user.checkingLoggedIn
+)
+
 const errorSelector = createSelector(
     [userSelector],
     (user) => user.errMsg
@@ -20,5 +25,6 @@ const errorSelector = createSelector(
 export {
     currentUserSelector,
     isFetchingSelector,
-    errorSelector
+    errorSelector,
+    isCheckingLoggedInSelector
 }

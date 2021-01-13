@@ -53,9 +53,10 @@ export const loadAlreadyLoggedinUserStartAsync = () => {
             const auth_token = localStorage.getItem('auth_token');
             if(!auth_token)
             {
+                console.log('jhgfjfghdfvbjm')
+                dispatch(loginUserFailure('Unauthorised'));
                 return;
             }
-            dispatch(loginUserStart())
             const fetchUser = await axios.get(`${globalConstants.baseServerUrl}/auth/getUser`, {headers:{authorization:'Bearer '+auth_token}});
             if(fetchUser.data.success) {
                 dispatch(loginUserSuccess(fetchUser.data.userInfo));
@@ -69,6 +70,7 @@ export const loadAlreadyLoggedinUserStartAsync = () => {
         catch(e)
         {
             console.log('anything');
+            dispatch(loginUserFailure('Unauthorised'));
         }
     }
 }
