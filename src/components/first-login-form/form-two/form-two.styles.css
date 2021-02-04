@@ -1,0 +1,60 @@
+.first-login-form__form-two__experience {
+  margin-bottom: 32px;
+}
+
+.first-login-form__form-two__experience > h3 {
+  margin-bottom: 16px;
+}
+
+.first-login-form__form-two__experience form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: rgb(202, 202, 202) 1px solid;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.first-login-form__form-two__experience__button {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.first-login-form__form-two__experience__button button {
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: blue;
+  border-radius: 4px;
+}
+
+.first-login-form__form-two__experience__button button:hover {
+  cursor: pointer;
+  background: rgb(235, 235, 235);
+}
+
+.first-login-form__form-two__experience__added {
+  margin-bottom: 16px;
+}
+
+.first-login-form__form-two__experience__added-single {
+  background: rgb(237, 238, 238);
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.first-login-form__form-two__experience__added-single > h3 {
+  color: rgb(5, 5, 207);
+}
+
+.first-login-form__form-two__experience__added-single > h4,
+.first-login-form__form-two__experience__added-single > h5 {
+  font-weight: normal;
+}
+
+.first-login-form__form-two__experience__added-single > h5 {
+  margin-bottom: 8px;
+}

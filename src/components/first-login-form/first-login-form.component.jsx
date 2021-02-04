@@ -1,23 +1,26 @@
-import React from 'react';
-import TextField from '@material-ui/core/TextField';
+import "date-fns";
+import React, { useState } from "react";
 
-import './first-login-form.styles.css';
+import FormTwoComponent from "./form-two/form-two.component";
+import FormOneComponent from "./form-one/form-one.component";
+import "./first-login-form.styles.css";
 
 const FirstLoginForm = () => {
-    return (
-        <div className='first-login-form'>
-            <div className='first-login-form__form-one'>
-                <h3> General Info</h3>
-                <TextField
-                    id="outlined-multiline-static"
-                    label="Multiline"
-                    multiline
-                    rows={4}
-                    variant="outlined"
-                />
-            </div>
-        </div>
-    )
-}
+  const [pageNumber, setPageNumber] = useState(1);
+  const handleNextClick = () => {
+    if (pageNumber === 1) {
+      setPageNumber(2);
+    }
+  };
+  return (
+    <div className="first-login-forms">
+      {pageNumber === 1 ? (
+        <FormOneComponent handleNextClick={handleNextClick} />
+      ) : (
+        <FormTwoComponent />
+      )}
+    </div>
+  );
+};
 
 export default FirstLoginForm;

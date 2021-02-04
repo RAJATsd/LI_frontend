@@ -1,5 +1,10 @@
-.first-login-form__form-one {
-    margin-top: 88px;
-    padding: 16px;
-    background: white;
+.first-login-forms {
+  padding: 0 14vw;
+}
+
+.first-login-form {
+  margin-top: 88px;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
 }

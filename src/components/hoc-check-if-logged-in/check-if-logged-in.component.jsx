@@ -1,35 +1,25 @@
-import React,{useEffect} from 'react';
-import {useDispatch,connect} from 'react-redux';
-import {loadAlreadyLoggedinUserStartAsync} from '../../redux/user/user.actions'; 
+import React from 'react';
+import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
+import {currentUserSelector} from '../../redux/user/user.selectors'; 
 
-const CheckIfLoggedIn = (Props) => {
-    //console.log(WrappedComponent);
-    const dispatch = useDispatch()
-    // return class extends React.Component {
-    //     constructor(props)
-    //     {
-    //         super(props);
-    //     }
-    //     componentDidMount()
-    //     {
-    //         //loadAlreadyLoggedinUserStartAsync;
-    //     }
+const CheckIfLoggedIn = (WrappedComponent) => {
+    const GoOrRedirect = ({currentUser,history}) => (
+        currentUser ? 
+        (
+            <WrappedComponent currentUser={currentUser}/>
+        )
+        :
+        (
+            history.push('/signin')
+        )
+    );
+    
+    const mapStateToProps = state => ({
+        currentUser : currentUserSelector(state)
+    })
 
-    //     render(){
-    //         return(
-    //            <div>
-
-    //            </div>
-    //         )
-    //     }
-    // }
-    return (
-        <Props />
-    )
+    return connect(mapStateToProps)(withRouter(GoOrRedirect))
 }
-
-const mapDispatchToProps = dispatch => ({
-    checkoggedIn : () => dispatch(loadAlreadyLoggedinUserStartAsync())
-})
 
 export default CheckIfLoggedIn;

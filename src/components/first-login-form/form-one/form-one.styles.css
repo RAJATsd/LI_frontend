@@ -1,0 +1,9 @@
+.first-login-form__form-one h3 {
+  margin-bottom: 16px;
+}
+
+.first-login-form__form-one form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

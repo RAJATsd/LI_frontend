@@ -11,3 +11,7 @@
     color: rgb(0, 0, 255);
     font-size: 25px;
 }
+
+.home-page-nav__buttons a {
+    text-decoration: none;
+}
